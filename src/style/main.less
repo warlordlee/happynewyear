@@ -28,33 +28,94 @@ html, body {
   }
 }
 
-.fire{
+.fire {
   position: absolute;
+  z-index: 200;
 
 }
-.fire{
+
+.fire {
   -webkit-animation: twinkling 1s infinite ease-in-out;
 }
-@-webkit-keyframes twinkling{
+
+@-webkit-keyframes twinkling {
   0% {
-    opacity:1;
+    opacity: 1;
   }
   50% {
-    opacity:0.5;
+    opacity: 0.5;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
-@keyframes twinkling{
+
+@keyframes twinkling {
   0% {
-    opacity:1;
+    opacity: 1;
   }
   50% {
-    opacity:0.5;
+    opacity: 0.5;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 
+}
+
+.text-container {
+  background: url("../assets/home/text-bg.png");
+  background-size: 100% 100%;
+  width: 85%;
+  margin: 15% auto 0;
+  height: 550px;
+  position: relative;
+  animation: textMove 2s;
+  -webkit-animation: textMove 2s;
+}
+
+.text-title {
+  font-family: ming, sans-serif;
+  color: #FFCFAA;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -7px;
+  letter-spacing: 1px;
+}
+
+@keyframes textMove {
+  0% {
+    transform: translate(0, 1500px);
+  }
+  90% {
+    transform: translate(0, -30px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+.text-bot {
+  width: 95%;
+  position: absolute;
+  z-index: 300;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: calc(10% + 398px);
+  height: 245px;
+  animation: textMove 2.5s;
+  -webkit-animation: textMove 2.5s;
+}
+@keyframes textBotMove {
+  0% {
+    transform: translate(0, 1000px);
+  }
+  80% {
+    transform: translate(0, -55px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
 }
