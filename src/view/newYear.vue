@@ -89,6 +89,14 @@
                     }
                 ]
             }
+        },
+        methods: {
+            swipeup() {
+                alert('上划')
+            },
+            swipedown() {
+                alert('下划')
+            }
         }
     }
 </script>
