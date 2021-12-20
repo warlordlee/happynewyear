@@ -16,6 +16,11 @@
                 点击滚动
             </div>
         </div>
+        <div class="music">
+            <audio loop="loop" autoplay="autoplay">
+                <source src="../assets/music/bg.mp3" type="audio/mpeg">
+            </audio>
+        </div>
     </div>
 </template>
 
@@ -55,4 +60,10 @@
 </script>
 
 <style scoped lang="less">
+    .music{
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0;
+    }
 </style>
