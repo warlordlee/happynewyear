@@ -1,0 +1,60 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'ming';
+  src: url("../assets/GenWanMinJP-SemiBold.ttf") format("truetype");
+}
+
+.left {
+  float: left;
+}
+
+.el-carousel--vertical {
+  height: 100%;
+
+  .el-carousel__container {
+    height: 100%;
+  }
+}
+
+.fire{
+  position: absolute;
+
+}
+.fire{
+  -webkit-animation: twinkling 1s infinite ease-in-out;
+}
+@-webkit-keyframes twinkling{
+  0% {
+    opacity:1;
+  }
+  50% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@keyframes twinkling{
+  0% {
+    opacity:1;
+  }
+  50% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:1;
+  }
+
+}
