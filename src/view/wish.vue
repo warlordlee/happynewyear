@@ -9,7 +9,7 @@
         <!--信纸容器-->
         <div class="text-container">
             <div class="text-title">
-                再见,2021
+                你好,2022
             </div>
             <div class="text-content">
                 <div v-for="(t,index) in text" :key="'text'+index" :class="0===index?'text-left':''">
@@ -20,12 +20,12 @@
         <!--信封图片-->
         <img src="../assets/home/text-bot.png" class="text-bot">
         <!--女孩图片-->
-        <img src="../assets/lastYear/girl.png" class="girl">
-        <!--气球-->
-        <template v-for="(b,index) in ball">
-            <img :key="'ball'+index" class="ball"
-                 :style="{width:b.width,left:b.left,bottom:b.bottom,right:b.right,}"
-                 :src="b.src">
+        <img src="../assets/wish/girl.png" class="girl">
+        <!--星星-->
+        <template v-for="(s,index) in stars">
+            <img :key="'star'+index" class="star"
+                 :style="{width:s.width,left:s.left,bottom:s.bottom,right:s.right,}"
+                 src="../assets/wish/stars.png">
         </template>
     </commonContainer>
 </template>
@@ -34,19 +34,20 @@
     import commonContainer from "@/components/commonContainer";
 
     export default {
-        name: "lastYear",
+        name: "wish",
         components: {
             commonContainer
         },
         data() {
             return {
                 text:[
-                    "xx同学:",
-                    "2021年马上就要过去了",
-                    "在这里提前祝你双旦节快乐",
-                    "愿你抛弃过去一年中一切烦恼",
-                    "让快乐女神与你拥抱",
-                    "新的一年天天开心"
+                    "",
+                    "未来的日子里",
+                    "辛勤的耕耘终将有收获",
+                    "每一滴汗水都会有回报",
+                    "你将创造更精彩的未来",
+                    "新的一年来到",
+                    "祝你身体健康万事如意"
                 ],
                 //焰火图片
                 fire: [
@@ -65,24 +66,26 @@
                         right: 0,
                         top: '20px'
                     }],
-                ball: [
+                stars: [
                     {
                         width: '50px',
                         left: '17%',
-                        bottom: '23%',
-                        src: require("../assets/lastYear/yellow.png")
+                        bottom: '43%',
                     },
                     {
-                        width: '50px',
-                        left: '60%',
-                        bottom: '35%',
-                        src: require("../assets/lastYear/red.png")
+                        width: '45px',
+                        right: '20%',
+                        bottom: '45%',
                     },
                     {
-                        width: '50px',
-                        right: '15%',
-                        bottom: '25%',
-                        src: require("../assets/lastYear/yellow.png")
+                        width: '40px',
+                        right: '45%',
+                        bottom: '28%',
+                    },
+                    {
+                        width: '40px',
+                        right: '55%',
+                        bottom: '49%',
                     }]
             }
         }
@@ -92,9 +95,9 @@
 <style scoped lang="less">
     .girl {
         position: absolute;
-        bottom: 90px;
-        width: 170px;
-        height: 315px;
+        bottom: 120px;
+        width: 250px;
+        height: 240px;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -115,31 +118,31 @@
         }
     }
 
-    .ball {
+    .star {
         position: absolute;
-        animation: ballMove 2.5s;
-        -webkit-animation: ballMove 2.5s;
+        animation: starMove 1.5s;
+        -webkit-animation: starMove 1.5s;
     }
 
-    @keyframes ballMove {
+    @keyframes starMove {
         0% {
-            transform: translate(0, 1000px);
+            transform: scale(0, 0);
         }
         90% {
-            transform: translate(0, -15px);
+            transform: scale(1.2, 1.2);
         }
         100% {
-            transform: translate(0, 0px);
+            transform: scale(1, 1);
         }
     }
     @media screen and (min-height: 800px) {
         .girl {
-            bottom: 150px;
+            bottom: 160px;
         }
     }
     @media screen and (max-height: 680px) {
         .girl {
-            bottom: 40px;
+            bottom: 80px;
         }
     }
 </style>

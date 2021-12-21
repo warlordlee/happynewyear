@@ -8,6 +8,12 @@
             <el-carousel-item>
                 <last-year :key="lastYear"></last-year>
             </el-carousel-item>
+            <el-carousel-item>
+                <wish :key="wish"></wish>
+            </el-carousel-item>
+            <el-carousel-item>
+                <family :key="family"></family>
+            </el-carousel-item>
         </el-carousel>
         <div class="action"
              @click="handleClick">
@@ -27,19 +33,25 @@
 <script>
     import newYear from "@/view/newYear";
     import lastYear from "@/view/lastYear";
+    import wish from "@/view/wish";
+    import family from "@/view/family";
 
     export default {
         name: "home",
         components: {
             newYear,
-            lastYear
+            lastYear,
+            wish,
+            family
         },
         data() {
             return {
                 index: 0,
                 key: 0,
                 newYear: 'newYear',
-                lastYear: 'lastYear'
+                lastYear: 'lastYear',
+                wish:'wish',
+                family:'family'
             }
         },
         methods: {
@@ -47,6 +59,8 @@
                 this.key++;
                 this.newYear = 'newYear' + this.key;
                 this.lastYear = 'lastYear' + this.key;
+                this.wish = 'wish' + this.key;
+                this.family = 'family' + this.key;
                 this.$refs.year.next()
             },
             goUp() {
