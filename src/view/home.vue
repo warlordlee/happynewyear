@@ -14,6 +14,12 @@
             <el-carousel-item>
                 <family :key="family"></family>
             </el-carousel-item>
+            <el-carousel-item>
+                <honey :key="honey"></honey>
+            </el-carousel-item>
+            <el-carousel-item>
+                <end :key="end"></end>
+            </el-carousel-item>
         </el-carousel>
         <div class="action"
              @click="handleClick">
@@ -35,6 +41,8 @@
     import lastYear from "@/view/lastYear";
     import wish from "@/view/wish";
     import family from "@/view/family";
+    import honey from "@/view/honey";
+    import end from "@/view/end";
 
     export default {
         name: "home",
@@ -42,7 +50,9 @@
             newYear,
             lastYear,
             wish,
-            family
+            family,
+            honey,
+            end
         },
         data() {
             return {
@@ -51,7 +61,9 @@
                 newYear: 'newYear',
                 lastYear: 'lastYear',
                 wish:'wish',
-                family:'family'
+                family:'family',
+                honey:'honey',
+                end:'end'
             }
         },
         methods: {
@@ -61,13 +73,9 @@
                 this.lastYear = 'lastYear' + this.key;
                 this.wish = 'wish' + this.key;
                 this.family = 'family' + this.key;
+                this.honey = 'honey' + this.key;
+                this.end = 'end' + this.key;
                 this.$refs.year.next()
-            },
-            goUp() {
-                alert('上划')
-            },
-            goDown() {
-                alert('下划')
             }
         }
     }
