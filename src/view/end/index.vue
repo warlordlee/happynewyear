@@ -59,7 +59,7 @@
                     "保重身体",
                     "毕竟",
                     "世界辣么大",
-                    "总得去看看"
+                    "还等你去看看"
                 ]
             }
         }
@@ -176,7 +176,7 @@
         position: absolute;
         width: 200px;
         top: 400px;
-        right: 60px;
+        right: 51px;
     }
 
     .bottom {
